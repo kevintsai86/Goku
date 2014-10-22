@@ -17,6 +17,45 @@ module.exports = function (grunt) {
 
   grunt.initConfig({
     config: config,
+    autoprefixer: {
+     watch: {
+       expand: true,
+       flatten: true,
+       src: config.app + '/styles/*.css',
+       dest: config.app + '/styles'
+     }
+    },
+    sass: {
+     watch: {
+       options: {
+         trace: true,
+         style: 'expanded'
+       },
+       files: [{
+         expand: true,
+         cwd: config.app,
+         src: ['**/*.sass', '**/*.scss'],
+         dest: config.app,
+         ext: '.css'
+       }]
+     }
+    },
+    watch: {
+     styles: {
+       files: [config.app + '/**/*.sass', config.app + '/**/*.scss'],
+       tasks: ['sass:watch', 'autoprefixer:watch'],
+       options: {
+         livereload: true
+       }
+     },
+     htmls: {
+       files: [config.app + '/**/*.html'],
+       tasks: [],
+       options: {
+         livereload: true
+       }
+     }
+    },
     clean: {
       dist: {
         files: [{
