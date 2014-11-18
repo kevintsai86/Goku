@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<title>Text Display</title>
+
+<!-- Stylesheets -->
+<link rel='stylesheet' type='text/css' href='styles/index.css'/>
+
+</head>
+
+<body>
+	<!-- Image Display -->
+	<div id='mainView'>
+		<span>Escape Path</span><br>
+			<img class='' id='imgDsply1' src='img/左.png' alt=''/>
+			<img class='' id='imgDsply2' src='img/右.png' alt=''/>
+			<img class='' id='imgDsply3' src='img/雙.png' alt=''/>
+			<img class='' id='imgDsply4' src='img/叉叉.png' alt=''>
+	</div>
+	<!-- Image Control Panel -->
+	<div id='gokuCtrl'>
+		<form name='gokuForm' action=''>
+			<span>Image Control Panel</span>
+			<br><br><br>
+			<!-- Radio controls for picking which arrow to show -->
+			<input class='btn' id='resetBtn' type='button' value='Reset'></input><br><br>
+			<span class="subheader">|Display|</span><br><br>
+			<input class='radioBtn' id='leftRad' name='imgBtn' type='radio' placeholder=''></input>
+			<label class='radioLBL' id='' name='' for="leftRad">Left</label>
+			<input class='radioBtn' id='rightRad' name='imgBtn' type='radio' placeholder=''></input>
+			<label class='radioLBL' id='' name='' for="rightRad">Right</label>
+			<input class='radioBtn' id='bothRad' name='imgBtn' type='radio' placeholder=''></input>
+			<label class='radioLBL' id='' name='' for="bothRad">Both</label>
+			<input class='radioBtn' id='neitherRad' name='imgBtn' type='radio' placeholder=''></input>
+			<label class='radioLBL' id='' name='' for="neitherRad">Neither</label>
+			<br> <br>
+			<!-- buttons controls for Fade function *DEFUNCT -->
+			<!-- <span class="subheader">|Fade|</span><br>
+			<input class='btn' id='leftFade' type='button' value='Left'>
+			<input class='btn' id='rightFade' type='button' value='Right'>
+			<input class='btn' id='bothFade' type='button' value='Both'>
+			<input class='btn' id='neitherFade' type='button' value='Neither'>
+			<br> <br> -->
+			<!-- button controls for slide functions -->
+			<span class="subheader">|Slide|</span><br>
+			<input class='btn' id='leftSlide' type='button' value='Left'>
+			<input class='btn' id='rightSlide' type='button' value='Right'>
+			<input class='btn' id='bothSlide' type='button' value='Both'>
+			<input class='btn' id='neitherSlide' type='button' value='Neither'>
+			<input id='slideEvent' type='button' style="display: none;">
+		</form>
+	</div>
+
+<!-- Scripts -->
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+<script src='image_form.js' type='text/javascript'></script>
+</body>
+</html>

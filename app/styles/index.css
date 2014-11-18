@@ -1,0 +1,131 @@
+/*CSS file for index1.html*/
+body{
+	margin: 0px;
+}
+div{
+	width: 1024px;
+	height: 600px;
+}
+#mainView{
+	background-color: rgba(160,230,240,.2);
+	position: relative;
+	text-align: center;
+	overflow: hidden;
+	font-size: 42px;
+}
+#mainDsply{
+	position: relative;
+	font-size: 250%;
+}
+#gokuCtrl{
+	background-color: rgba(255,220,180,.3);
+}
+.color-box{
+	float: right;
+	width:30px;
+	height:30px;
+	margin:5px;
+	border: 1px solid black;
+}
+form{
+	padding-left: 8px;
+}
+select{
+	font-size: 20px;
+}
+span{
+	font-size: 40px;
+}
+span.subheader{
+	margin-left: 20px;
+	font-size: 30px;
+}
+textarea#gokuView{
+	float: center;
+	width: 800px;
+	height: 124px;
+	font-size: 18px;
+
+}
+
+/* Input rows */
+.textCol{
+	width: 800px;
+	height: 30px;
+	margin: 5px 0px;
+	font-size: 20px;
+}
+.btn{
+	width: 75px;
+	max-height: 50pxpx;
+	font-size: 140%;
+	text-align: center;
+}
+
+/*IMAGE FORM styles*/
+/* Image container */
+#imgBox{
+	width: 500px;
+	height: 500px;
+	position: relative;
+}
+/* base class for all image default positions when shown */
+img{
+	position: relative;
+	display: none;
+	opacity: 1;
+	left: 0%;
+	top: 0%;
+	-webkit-transition-property: left, top, opacity;
+            transition-property: left, top, opacity;
+    -webkit-transition-duration: 1s, 1s, 0.7s;
+            transition-duration: 1s, 1s, 0.7s;
+    -webkit-transition-timing-function: ease;
+            transition-timing-function: ease;
+    -webkit-transition-delay: 0s, 0s, .2s;
+            transition-delay: 0s, 0s, .2s;
+}
+/* classes for where images should be positioned before transition */
+.slidePic1{
+	left: 30%;
+	opacity: 0;
+}
+.slidePic2{
+	left: -30%;
+	opacity: 0;
+}
+.slidePic3{
+	top: 30%;
+	opacity: 0;
+}
+.slidePic4{
+	top: 40% !important;
+	opacity: 0;
+}
+/* image specific CSS */
+#imgDsply1{
+	width: 500px;
+	height: 500px;
+}
+#imgDsply2{
+	width: 500px;
+	height: 500px;
+}
+#imgDsply3{
+	width: 600px;
+	height: 500px;
+}
+#imgDsply4{
+	top: 5%;
+	width: 500px;
+	height: 500px;
+}
+/* classes for the radio buttons */
+.radioLBL{
+	line-height: 19px;
+	font-size: 25px;
+	margin-right: 10px;
+}
+.radioBtn{
+	vertical-align: top;
+}

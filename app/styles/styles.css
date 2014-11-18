@@ -1,0 +1,38 @@
+body{
+	font-size: 20px;
+}
+
+div{
+/*	width: 1025px;
+	height: 600px;*/
+	border: 1px solid black;
+}
+.color-box{
+	float: right;
+	width:30px;
+	height:30px;
+	margin:5px;
+	border: 1px solid black;
+}
+
+fieldset.textIn{
+	width: 1025px;
+	height: 600px;
+}
+input{
+	font-size: 18px;
+}
+.btn{
+	width: 75px;
+	max-height: 100px;
+	height: 50px;
+}
+
+select{
+	font-size: 20px;
+}
+textarea{
+	font-size: 20px;
+	width: 485px;
+	height: 350px; 
+}
