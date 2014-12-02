@@ -56,10 +56,11 @@ textarea#gokuView{
 	font-size: 20px;
 }
 .btn{
-	width: 75px;
-	max-height: 50pxpx;
+	width: 120px;
+	max-height: 70px;
 	font-size: 140%;
 	text-align: center;
+	margin-right: 10px; 
 }
 
 /*IMAGE FORM styles*/
@@ -78,12 +79,12 @@ img{
 	top: 0%;
 	-webkit-transition-property: left, top, opacity;
             transition-property: left, top, opacity;
-    -webkit-transition-duration: 1s, 1s, 0.7s;
-            transition-duration: 1s, 1s, 0.7s;
-    -webkit-transition-timing-function: ease;
-            transition-timing-function: ease;
-    -webkit-transition-delay: 0s, 0s, .2s;
-            transition-delay: 0s, 0s, .2s;
+    -webkit-transition-duration: 0.7s, 0.7s, 0.6s;
+            transition-duration: 0.7s, 0.7s, 0.6s;
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+    -webkit-transition-delay: 0s, 0s, 0.1s;
+            transition-delay: 0s, 0s, 0.1s;
 }
 /* classes for where images should be positioned before transition */
 .slidePic1{
@@ -126,6 +127,6 @@ img{
 	font-size: 25px;
 	margin-right: 10px;
 }
-.radioBtn{
+.radioImgBtn{
 	vertical-align: top;
 }
