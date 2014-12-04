@@ -48,11 +48,11 @@ function slideInImg(imgID){
 	$('#slideInEvent').trigger('slideIn', [imgID]);
 	console.log('slideInImg function complete');
 }
-	// slide in event: slide function triggers the event to slide images into position
+	// slide in event: slideIn function triggers the event to slide images into position
 $('#slideInEvent').on('slideIn', function(event, imgID){
 	$('#imgDsply'+imgID).css({opacity:''});
 	setTimeout(function(){
-		$('#imgDsply'+imgID).toggleClass('slidePic'+imgID);
+		$('#imgDsply'+imgID).removeClass('slidePic'+imgID);
 	}, 650);
 	console.log('Slide In Event complete');
 });
@@ -94,12 +94,12 @@ $('#slideBtn').click(function(){
 		slideInImg(imageID);
 	});
 });
-//slide out is weird right now when you use it by itself
+//slideIn is weird right now when you use it while the same picture is on screen
 $('#slideInBtn').click(function(){
 	slideInImg(imageID);
 });
 $('#slideOutBtn').click(function(){
 	slideOutImg(imageID,function(){
-		$('#imgDsply'+imageID).toggleClass('slidePic'+imageID);
+		$('#imgDsply'+imageID).removeClass('slidePic'+imageID);
 	});
 });

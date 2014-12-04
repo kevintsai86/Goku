@@ -1,4 +1,4 @@
-/*CSS file for index1.html*/
+/*CSS file for Goku forms*/
 body{
 	margin: 0px;
 }
@@ -63,7 +63,7 @@ textarea#gokuView{
 	margin-right: 10px; 
 }
 
-/*IMAGE FORM styles*/
+/* FORM_IMAGE styles*/
 /* Image container */
 #imgBox{
 	width: 500px;
@@ -130,3 +130,5 @@ img{
 .radioImgBtn{
 	vertical-align: top;
 }
+
+/* FORM_INFO styles*/
