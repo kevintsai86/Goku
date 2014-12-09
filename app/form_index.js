@@ -1,4 +1,4 @@
-// javascript file for index
+// javascript file for Index Page
 // 
 // make an array to take in sentences to be displayed on the ticker
 var gokuArray = ['默認' , 'Default','瑞德感知','Thunder Sensing'];

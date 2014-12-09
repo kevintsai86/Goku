@@ -1,4 +1,4 @@
-/* Javascript file for Image Control */
+/* Javascript file for Image Page */
 //
 //Global variables
 //
@@ -22,40 +22,47 @@ function fadeOutImg(delay, callback){
 function fadeInImg(imgID){
 	$('img').css({display:'none'});
 	$('#imgDsply'+imgID).css({display:'inline-block'});
-	$('#imgDsply'+imgID).animate({opacity:1},600);
+	$('#imgDsply'+imgID).animate({opacity:1},500);
 }
 
 //Slide functions
 function slideOutImg(imgID, delay, callback){
-	var slideway=0;
-	if(imgID==1)
-		slideway=2;
-	else if(imgID==2)
-		slideway=1;
-	else
-		slideway=imgID;
+	var slideway = slideDirection(imgID);
 	// console.log(imgID+' should slide in direction '+slideway);
-	$('#imgDsply'+imgID).toggleClass('slidePic'+slideway);
+	$('#imgDsply'+imgID).addClass('slidePic'+slideway);
 	fadeOutImg();
-	window.setTimeout(callback, delay);
+	
+	setTimeout( function(){
+		$('#imgDsply'+imageID).removeClass('slidePic'+slideDirection(imageID) , delay)
+	}, 600);
 }
+
 function slideInImg(imgID){
 	//positions the element off center
-	$('img').css({display:'none'});
-	$('#imgDsply'+imgID).toggleClass('slidePic'+imgID);
-	$('#imgDsply'+imgID).css({display:'inline-block'});
-	//trigger to start slide effect
-	$('#slideInEvent').trigger('slideIn', [imgID]);
-	console.log('slideInImg function complete');
-}
-	// slide in event: slideIn function triggers the event to slide images into position
-$('#slideInEvent').on('slideIn', function(event, imgID){
-	$('#imgDsply'+imgID).css({opacity:''});
+	$('img').css({display:''});
+	$('#imgDsply'+imgID).addClass('slidePic'+imgID);
+	$('#imgDsply'+imgID).css({opacity:'', display:'inline-block'});
 	setTimeout(function(){
 		$('#imgDsply'+imgID).removeClass('slidePic'+imgID);
-	}, 650);
-	console.log('Slide In Event complete');
-});
+	}, 600);
+	//trigger to start slide effect
+	/*$('#slideInEvent').trigger('slideIn', [imgID]);
+	console.log('slideInImg function complete');*/
+}
+//purely for slideOut function
+function slideDirection(imgID){
+	switch (parseInt(imgID)){
+	case 1:
+	// console.log('returned 2');
+		return 2;
+	case 2:
+	// console.log('returned 1');
+		return 1;
+	default:
+	// console.log('returned imgID = '+ imgID);
+		return imgID;
+	}
+}
 
 //
 //Click events for the Img Control Panel
@@ -76,7 +83,7 @@ $('.radioImgBtn').click(function(){
 
 //Fade In/out buttons **Note timing is off when you start hitting buttons in rapid succession
 $('#fadeBtn').click(function(){
-	fadeOutImg(650, function(){
+	fadeOutImg(600, function(){
 		fadeInImg(imageID);
 	});
 });
@@ -90,7 +97,7 @@ $('#fadeOutBtn').click(function(){
 
 //Slide In/out buttons
 $('#slideBtn').click(function(){
-	fadeOutImg(650, function(){
+	slideOutImg(imageID, 600, function(){
 		slideInImg(imageID);
 	});
 });
@@ -99,7 +106,7 @@ $('#slideInBtn').click(function(){
 	slideInImg(imageID);
 });
 $('#slideOutBtn').click(function(){
-	slideOutImg(imageID,function(){
-		$('#imgDsply'+imageID).removeClass('slidePic'+imageID);
+	slideOutImg(imageID, 600, function(){
+		// $('#imgDsply'+imageID).removeClass('slidePic'+slideDirection(imageID) );
 	});
 });

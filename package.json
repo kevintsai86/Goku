@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "description": "",
   "keywords": [],
-  "dependencies": {},
+  "dependencies": {
+    "rangeslider.js": "^0.3.7"
+  },
   "devDependencies": {
     "concat-files": "~0.1.0",
     "grunt": "~0.4.5",

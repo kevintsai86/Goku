@@ -10,15 +10,34 @@
 </head>
 <body>
 	<!-- Info Page Display -->
-	<div id="mainView">
-		<img id="infoPageMockup" src="img/環境資訊圖.png" alt="" style="display:none">
+	<div class="container" id="infoPage">
+		<!-- <img id="infoPageMockup" src="img/background.png" alt=""> -->
+		<div class="dsplyTime">11:00</div><br>
+		<div class="percentage">Indoor Temperature</div>
+		<div class="temperature">26&deg;</div>
+		<div class="humidityWrap">
+			<p class="hMeasure"><span class="humidityTxt">Humidity</span><img class="icon" src="img/溫度計切換圖/5.png" alt=""><span id="humidPercent">25%</span></p><br>
+			<div class="humidityBloc" id="hBloc1"></div><div class="humidityBloc" id="hBloc2"></div><div class="humidityBloc" id="hBloc3"></div><div class="humidityBloc" id="hBloc4"></div><div class="humidityBloc" id="hBloc5"></div>
+		</div>
 	</div>
 	<!-- Info Page Control Panel -->
-	<div id='gokuCtrl'>
-		<!-- stuff -->
+	<div class="container" id='gokuCtrl'>
+		<form name='gokuForm' action=''>
+			<span>Info Page Control Panel</span>
+			<br><br><br>
+			<span class="subheader">Temperature Control</span>
+			<br>
+			<input class="sliderCtrl" id="tempCtrl" type="range" min="-40" max="100" step="1" value="26">
+			<label id="tempDsply" for="tempCtrl">26</label>
+			<br><br>
+			<span class="subheader">Humidity Control</span>
+			<br>
+			<input class="sliderCtrl" id="humidityCtrl" type="range" min="0" max="100" step="1" value="25">
+			<label id="humidityDsply" for="humidityCtrl">25</label>
+		</form>
 	</div>
 <!-- Scripts -->
-<script src="scripts/jquery-1.11.1.min.js"></script>
-<script src="forn_info.js"></script>
+<script src="plugins/jquery-1.11.1.min.js"></script>
+<script src="form_info.js"></script>
 </body>
 </html>
