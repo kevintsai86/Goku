@@ -1,5 +1,24 @@
 /*Javascript for Info Page*/
 
+//clock function
+//
+function updateClock(){
+	//setup for clock
+	var currentTime = new Date();
+	var currentHours = currentTime.getHours ( );
+	var currentMinutes = currentTime.getMinutes ( );
+	var currentSeconds = currentTime.getSeconds ( );
+	//pad mins and secs with 0 if necessary
+	currentMinutes = ( currentMinutes < 10 ? "0" : "" ) + currentMinutes;
+	currentSeconds = ( currentSeconds < 10 ? "0" : "" ) + currentSeconds;
+	var timeOfDay = ( currentHours < 12 ) ? "AM" : "PM";
+	currentHours = ( currentHours > 12 ) ? currentHours - 12 : currentHours;
+	currentHours = ( currentHours == 0 ) ? 12 : currentHours;
+	var currentTimeString = currentHours + ":" + currentMinutes +/* ":" + currentSeconds +*/ " " + timeOfDay;
+	//Display clock
+	document.getElementById("clock").firstChild.nodeValue = currentTimeString;
+}
+
 //functions for changing the display
 //
 function temperChange(val){
@@ -49,6 +68,8 @@ function humidityChange(val){
 			alert('There is some error');
 	}
 }
+//run clock
+setInterval('updateClock()', 1000 );
 
 //Info Page event controls
 //temperature control slider

@@ -5,19 +5,49 @@ body{
 div.container{
 	width: 1024px;
 	height: 600px;
-	overflow: hidden;
-}
-#mainView{
-	background-color: rgba(160,230,240,.2);
 	position: relative;
+	overflow: hidden;
 	text-align: center;
 	font-size: 42px;
+	transform-style: perserve-3d;
 }
-#mainDsply{
+.pt-page {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+}
+.current{
+	visibility: visible;
+}
+#gokuView{
+	background-color: rgba(0,0,0,.5);
+}
+#textView{
+	background-color: rgba(240,210,210,1);
+}
+#imageView{
+	background-color: rgba(210,240,210,1);
+}
+#infoView{ 
+	font-family: 黑體繁, arial, helvetica, serif;
+	background: url('../img/background.png');
+	background-size: 1024px 600px;
+	background-repeat: no-repeat;
+	background-color: rgba(210, 210, 240, 1);
+	color: rgba(200,245,255,1);
+}
+#textDsply{
 	position: relative;
 	font-size: 250%;
 }
 #gokuCtrl{
+	width: 1024px;
 	background-color: rgba(255,220,180,.3);
 }
 .color-box{
@@ -28,7 +58,7 @@ div.container{
 	border: 1px solid black;
 }
 form{
-	padding-left: 8px;
+	padding-left: 10px;
 }
 select{
 	font-size: 20px;
@@ -48,7 +78,11 @@ textarea#gokuView{
 	font-size: 18px;
 
 }
-
+/* Div control styles */
+.divNav{
+	margin: 5px;
+	font-size: 30px;
+}
 /* Input rows */
 .textCol{
 	width: 800px;
@@ -128,17 +162,6 @@ textarea#gokuView{
 
 /* FORM_INFO styles*/
 /*temperature slider*/
-#infoPage{
-	position: relative;
-	text-align: center;
-	font-family: 黑體繁, arial, helvetica, serif;
-	font-size: 42px;
-	background: url('../img/background.png');
-	background-size: 1024px 600px;
-	background-repeat: no-repeat;
-	background-color: rgba(0, 0, 0, .7);
-	color: rgba(200,245,255,1);
-}
 .dsplyTime{
 	font-size: 180%;
 	margin-top: 40px;

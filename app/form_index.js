@@ -68,14 +68,5 @@ $('#rst').click(function(){
 	gokuArray = ['默認' , 'Default','瑞德感知','Thunder Sensing'];
 	i = 0;
 });
-$('.color-box').colpick({
-	colorScheme:'dark',
-	layout:'rgbhex',
-	color:'ff8800',
-	onSubmit:function(hsb,hex,rgb,el) {
-		$(el).css('background-color', '#'+hex);
-		$(el).colpickHide();
-	}
-}).css('background-color', '#000000');
 
 //setInterval(function(){fadeDsply()}, 3400);

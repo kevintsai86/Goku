@@ -33,8 +33,9 @@ function slideOutImg(imgID, delay, callback){
 	fadeOutImg();
 	
 	setTimeout( function(){
-		$('#imgDsply'+imageID).removeClass('slidePic'+slideDirection(imageID) , delay)
-	}, 600);
+		$('#imgDsply'+imageID).removeClass('slidePic'+slideDirection(imageID) )
+	}, delay);
+	callback;
 }
 
 function slideInImg(imgID){
@@ -45,9 +46,6 @@ function slideInImg(imgID){
 	setTimeout(function(){
 		$('#imgDsply'+imgID).removeClass('slidePic'+imgID);
 	}, 600);
-	//trigger to start slide effect
-	/*$('#slideInEvent').trigger('slideIn', [imgID]);
-	console.log('slideInImg function complete');*/
 }
 //purely for slideOut function
 function slideDirection(imgID){
